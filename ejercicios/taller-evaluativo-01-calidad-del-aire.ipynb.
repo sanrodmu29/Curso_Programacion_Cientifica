@@ -21,11 +21,11 @@
         "\n",
         "**Nombre completo:** Santiago Rodríguez Muñoz\n",
         "\n",
-        "**Fecha:** 16 de septiembre de 2026\n",
+        "**Fecha:** 16 de septembre de 2026\n",
         "\n",
         "**Curso:** Programación científica — Momento evaluativo 1 (15 %)\n",
         "\n",
-        "Procesamiento de la serie de mediciones de PM2.5 de una red de monitoreo de calidad del aire: limpieza de datos faltantes y estadística descriptiva sin librerías."
+        "Procesamiento de la serie de mediciones de PM2.5 de una red de monitoreo de calidad del aire: limpieza de datos faltantes y sin librerías."
       ]
     },
     {
@@ -37,12 +37,12 @@
       "source": [
         "## Ejercicio 1 — Ficha de la campaña de medición\n",
         "\n",
-        "Se declaran los metadatos de la estación EST-01 con el tipo de dato exacto que corresponde a cada valor (texto, entero, flotante y booleano), y se verifica cada tipo con `type()`."
+        "Se declaran los metadatos de la estación EST-01 con el tipo de dato exacto que corresponde a cada valor (texto, entero, flotante y booleano), y se verifica cada tipo con type()."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": null,
       "id": "f539467c",
       "metadata": {
         "execution": {
@@ -99,12 +99,12 @@
       "source": [
         "## Ejercicio 2 — Conversión de unidades y error frente al equipo patrón\n",
         "\n",
-        "Se convierte la lectura del sensor de mg/m³ a µg/m³ usando el `factor_conversion` del Ejercicio 1, y se calcula el error absoluto, el error relativo porcentual y el error cuadrático frente al valor del equipo patrón."
+        "Convierte la lectura del sensor de mg/m³ a µg/m³ usando el factor_conversion del Ejercicio 1, y se calcula el error absoluto, el error relativo porcentual y el error cuadrático frente al valor del equipo patrón."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 2,
+      "execution_count": null,
       "id": "7e1d47bc",
       "metadata": {
         "execution": {
@@ -155,12 +155,12 @@
       "source": [
         "## Ejercicio 3 — Cobertura temporal del lote descargado\n",
         "\n",
-        "Con `numero_lecturas` del Ejercicio 1 y 12 lecturas por hora, se calcula cuántas horas y días completos cubre el lote, usando exclusivamente división entera y módulo."
+        "Con numero_lecturas del Ejercicio 1 y 12 lecturas por hora, se calcula cuántas horas y días completos cubre el lote, usando solamente división entera y módulo."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": null,
       "id": "19cdbd85",
       "metadata": {
         "execution": {
@@ -211,12 +211,12 @@
       "source": [
         "## Ejercicio 4 — Validar una lectura sin decidir todavía\n",
         "\n",
-        "Se evalúa si la lectura es el centinela de dato faltante, si cae dentro del rango físico del sensor, y si es una lectura válida (en rango y no faltante), combinando `and` y `not` sin usar `if`."
+        "Evaluar si la lectura es el centinela de dato faltante, si cae dentro del rango físico del sensor, y si es una lectura válida (en rango y no faltante), combinando and y not sin usar if."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 4,
+      "execution_count": null,
       "id": "cdd39880",
       "metadata": {
         "execution": {
@@ -265,12 +265,12 @@
       "source": [
         "## Ejercicio 5 — Clasificar la lectura en la escala de calidad del aire\n",
         "\n",
-        "Con `lectura` del Ejercicio 4 se clasifica la concentración según la escala oficial de PM2.5, usando una única cadena `if / elif / else` ordenada de menor a mayor umbral."
+        "lectura del Ejercicio 4 se clasifica la concentración según la escala oficial de PM2.5, usando una única cadena if / elif / else ordenada de menor a mayor umbral."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 5,
+      "execution_count": null,
       "id": "22ee38d1",
       "metadata": {
         "execution": {
@@ -316,12 +316,12 @@
       "source": [
         "## Ejercicio 6 — Limpiar la serie horaria\n",
         "\n",
-        "Se recorre la serie de doce lecturas descartando los centinelas de dato faltante (`-999.0`) con `continue`, acumulando las lecturas válidas en una lista nueva y calculando el promedio solo sobre esas lecturas."
+        "Se recorre la serie de doce lecturas descartando los centinelas de dato faltante (-999.0) con continue, acumulando las lecturas válidas en una lista nueva y calculando el promedio solo sobre esas lecturas."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 6,
+      "execution_count": null,
       "id": "745d0a0c",
       "metadata": {
         "execution": {
@@ -377,12 +377,12 @@
       "source": [
         "## Ejercicio 7 — Estadística descriptiva de la serie limpia\n",
         "\n",
-        "Con dos recorridos sobre `lecturas_validas` (uno para los extremos, otro para la dispersión que depende del promedio) se calculan el máximo, el mínimo, el rango y la desviación estándar, sin usar `max()`, `min()` ni `sum()`."
+        "Con dos recorridos sobre lecturas_validas (uno para los extremos, otro para la dispersión que depende del promedio) se calculan el máximo, el mínimo, el rango y la desviación estándar, sin usar max(), min() ni sum()."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 7,
+      "execution_count": null,
       "id": "cbb27802",
       "metadata": {
         "execution": {
@@ -442,12 +442,12 @@
       "source": [
         "## Ejercicio 8 — Decaimiento tras cerrar la fuente de emisión\n",
         "\n",
-        "Tras alcanzar el pico de contaminación, la concentración baja un 15 % cada hora. Con `while` se calcula cuántas horas transcurren hasta que la concentración vuelve a categoría \"Buena\" (≤ 12.0 µg/m³)."
+        "Tras alcanzar el pico de contaminación, la concentración baja un 15 % cada hora. Con while se calcula cuántas horas transcurren hasta que la concentración vuelve a categoría \"Buena\" (≤ 12.0 µg/m³)."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 8,
+      "execution_count": null,
       "id": "680aca7b",
       "metadata": {
         "execution": {
@@ -496,12 +496,12 @@
       "source": [
         "## Ejercicio 9 — Registros de varias estaciones\n",
         "\n",
-        "Se recorren los registros de las tres estaciones (diccionarios con tupla de coordenadas y lista de lecturas propia), desempaquetando las coordenadas, calculando el promedio de cada estación con un bucle interno, obteniendo la humedad con `get` (para no fallar en las estaciones sin ese sensor) y clasificando cada promedio con la misma escala del Ejercicio 5."
+        "Se recorren los registros de las tres estaciones (diccionarios con tupla de coordenadas y lista de lecturas propia), desempaquetando las coordenadas, calculando el promedio de cada estación con un bucle interno, obteniendo la humedad con get (para no fallar en las estaciones sin ese sensor) y clasificando cada promedio con la misma escala del Ejercicio 5."
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": 9,
+      "execution_count": null,
       "id": "46ccc68b",
       "metadata": {
         "execution": {
@@ -572,7 +572,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 10,
+      "execution_count": null,
       "id": "846dc9f8",
       "metadata": {
         "execution": {
