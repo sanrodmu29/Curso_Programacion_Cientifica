@@ -1,4 +1,20 @@
 {
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM0pZKKbrkYwNLbkbqpBsJH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
   "cells": [
     {
       "cell_type": "markdown",
@@ -12,9 +28,17 @@
     },
     {
       "cell_type": "markdown",
-      "id": "1dbd5efc",
       "metadata": {
-        "id": "1dbd5efc"
+        "id": "ce59d92d"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sanrodmu29/Curso_Programacion_Cientifica/blob/main/ejercicios/taller-evaluativo-01-calidad-del-aire.ipynb.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4af3f587"
       },
       "source": [
         "# Taller evaluativo 01 — Python y estructuras de datos\n",
@@ -30,9 +54,8 @@
     },
     {
       "cell_type": "markdown",
-      "id": "600fa670",
       "metadata": {
-        "id": "600fa670"
+        "id": "b7abbca2"
       },
       "source": [
         "## Ejercicio 1 — Ficha de la campaña de medición\n",
@@ -42,36 +65,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "f539467c",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.616298Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.616056Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.626580Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.625112Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "f539467c",
-        "outputId": "86bc28e8-589d-431a-a5b4-a22dc37263c6"
+        "id": "7e8bad70",
+        "outputId": "23875936-5b18-4698-85c7-32cb6253b63e"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "<class 'str'>\n",
-            "<class 'str'>\n",
-            "<class 'int'>\n",
-            "<class 'int'>\n",
-            "<class 'float'>\n",
-            "<class 'bool'>\n",
-            "<class 'int'>\n"
-          ]
-        }
-      ],
       "source": [
         "codigo_estacion = \"EST-01\"\n",
         "sector = \"Norte\"\n",
@@ -88,13 +88,28 @@
         "print(type(latitud))\n",
         "print(type(sensor_calibrado))\n",
         "print(type(factor_conversion))"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'str'>\n",
+            "<class 'str'>\n",
+            "<class 'int'>\n",
+            "<class 'int'>\n",
+            "<class 'float'>\n",
+            "<class 'bool'>\n",
+            "<class 'int'>\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "4ff5a611",
       "metadata": {
-        "id": "4ff5a611"
+        "id": "d68f11c8"
       },
       "source": [
         "## Ejercicio 2 — Conversión de unidades y error frente al equipo patrón\n",
@@ -104,33 +119,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "7e1d47bc",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.628845Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.628645Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.633057Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.632135Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "7e1d47bc",
-        "outputId": "5c919ab3-f23f-4be9-f822-24509185ce4d"
+        "id": "ccabf75a",
+        "outputId": "4d583751-ff56-4bd2-e193-bc96c8675adf"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Lectura convertida (ug/m3): 41.8\n",
-            "Error absoluto: 1.7999999999999972\n",
-            "Error relativo porcentual: 4.499999999999993\n",
-            "Error cuadratico: 3.2399999999999896\n"
-          ]
-        }
-      ],
       "source": [
         "lectura_sensor_mg = 0.0418\n",
         "valor_patron_ug = 40.0\n",
@@ -144,13 +139,25 @@
         "print(\"Error absoluto:\", error_absoluto)\n",
         "print(\"Error relativo porcentual:\", error_relativo_porcentual)\n",
         "print(\"Error cuadratico:\", error_cuadratico)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lectura convertida (ug/m3): 41.8\n",
+            "Error absoluto: 1.7999999999999972\n",
+            "Error relativo porcentual: 4.499999999999993\n",
+            "Error cuadratico: 3.2399999999999896\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "6b21ade5",
       "metadata": {
-        "id": "6b21ade5"
+        "id": "e504b15b"
       },
       "source": [
         "## Ejercicio 3 — Cobertura temporal del lote descargado\n",
@@ -160,33 +167,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "19cdbd85",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.635487Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.635295Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.640559Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.639382Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "19cdbd85",
-        "outputId": "738b6c7b-4276-4fe0-b004-63926a42c425"
+        "id": "407b26ea",
+        "outputId": "08437df4-f05d-4312-a159-f67d8a03800e"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Horas completas: 25\n",
-            "Lecturas sobrantes: 5\n",
-            "Dias completos: 1\n",
-            "Horas sobrantes: 1\n"
-          ]
-        }
-      ],
       "source": [
         "lecturas_por_hora = 12\n",
         "\n",
@@ -200,13 +187,25 @@
         "print(\"Lecturas sobrantes:\", lecturas_sobrantes)\n",
         "print(\"Dias completos:\", dias_completos)\n",
         "print(\"Horas sobrantes:\", horas_sobrantes)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Horas completas: 25\n",
+            "Lecturas sobrantes: 5\n",
+            "Dias completos: 1\n",
+            "Horas sobrantes: 1\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "fa355982",
       "metadata": {
-        "id": "fa355982"
+        "id": "83993e44"
       },
       "source": [
         "## Ejercicio 4 — Validar una lectura sin decidir todavía\n",
@@ -216,32 +215,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "cdd39880",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.642624Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.642421Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.646810Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.645768Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "cdd39880",
-        "outputId": "202561c0-3cca-40f9-f038-5773568e364b"
+        "id": "a39e6a99",
+        "outputId": "feb475b1-be57-4619-f36f-3d1732092b49"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Es dato faltante: False\n",
-            "Esta en rango: True\n",
-            "Lectura valida: True\n"
-          ]
-        }
-      ],
       "source": [
         "lectura = 41.8\n",
         "codigo_dato_faltante = -999.0\n",
@@ -254,13 +234,24 @@
         "print(\"Es dato faltante:\", es_dato_faltante)\n",
         "print(\"Esta en rango:\", esta_en_rango)\n",
         "print(\"Lectura valida:\", lectura_valida)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Es dato faltante: False\n",
+            "Esta en rango: True\n",
+            "Lectura valida: True\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "46d6c53b",
       "metadata": {
-        "id": "46d6c53b"
+        "id": "42a6f40e"
       },
       "source": [
         "## Ejercicio 5 — Clasificar la lectura en la escala de calidad del aire\n",
@@ -270,30 +261,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "22ee38d1",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.648766Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.648591Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.652087Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.651385Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "22ee38d1",
-        "outputId": "5310934e-c658-4a57-d2dc-a17e1c695f61"
+        "id": "0da27e31",
+        "outputId": "dad54cf5-84f1-4e6a-da09-0a7b1c51f71b"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Categoria: Dañina para grupos sensibles\n"
-          ]
-        }
-      ],
       "source": [
         "if lectura <= 12.0:\n",
         "    categoria = \"Buena\"\n",
@@ -305,13 +279,22 @@
         "    categoria = \"Dañina para la salud\"\n",
         "\n",
         "print(\"Categoria:\", categoria)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Categoria: Dañina para grupos sensibles\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "4f12e69e",
       "metadata": {
-        "id": "4f12e69e"
+        "id": "9deb8618"
       },
       "source": [
         "## Ejercicio 6 — Limpiar la serie horaria\n",
@@ -321,32 +304,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "745d0a0c",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.653675Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.653449Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.658494Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.657350Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "745d0a0c",
-        "outputId": "27ef6299-aed1-4c4a-c057-66d0cb5db559"
+        "id": "479e9464",
+        "outputId": "bb6a8dd9-7f3b-4f76-86fc-ff2b89cbd83c"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Lecturas validas: 10\n",
-            "Lecturas descartadas: 2\n",
-            "Promedio PM2.5: 22.55\n"
-          ]
-        }
-      ],
       "source": [
         "lecturas_pm25 = [8.4, 12.7, -999.0, 15.2, 41.8, 9.6, -999.0, 58.3, 22.0, 13.9, 7.5, 36.1]\n",
         "\n",
@@ -366,13 +330,24 @@
         "print(\"Lecturas validas:\", len(lecturas_validas))\n",
         "print(\"Lecturas descartadas:\", lecturas_descartadas)\n",
         "print(\"Promedio PM2.5:\", promedio_pm25)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lecturas validas: 10\n",
+            "Lecturas descartadas: 2\n",
+            "Promedio PM2.5: 22.55\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "35665794",
       "metadata": {
-        "id": "35665794"
+        "id": "a383a64c"
       },
       "source": [
         "## Ejercicio 7 — Estadística descriptiva de la serie limpia\n",
@@ -382,33 +357,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "cbb27802",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.660501Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.660310Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.665561Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.664599Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "cbb27802",
-        "outputId": "706965b5-3c7f-44a2-9821-244ea38f245e"
+        "id": "b8607f6c",
+        "outputId": "abd300ec-7027-4e09-a108-41484612deee"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Maximo: 58.3\n",
-            "Minimo: 7.5\n",
-            "Rango: 50.8\n",
-            "Desviacion estandar: 16.287495203376114\n"
-          ]
-        }
-      ],
       "source": [
         "maximo_pm25 = lecturas_validas[0]\n",
         "minimo_pm25 = lecturas_validas[0]\n",
@@ -431,13 +386,25 @@
         "print(\"Minimo:\", minimo_pm25)\n",
         "print(\"Rango:\", rango_pm25)\n",
         "print(\"Desviacion estandar:\", desviacion_estandar)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Maximo: 58.3\n",
+            "Minimo: 7.5\n",
+            "Rango: 50.8\n",
+            "Desviacion estandar: 16.287495203376114\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "de5f1e62",
       "metadata": {
-        "id": "de5f1e62"
+        "id": "c539861c"
       },
       "source": [
         "## Ejercicio 8 — Decaimiento tras cerrar la fuente de emisión\n",
@@ -447,31 +414,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "680aca7b",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.667725Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.667501Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.672466Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.671270Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "680aca7b",
-        "outputId": "9eabaf08-9bab-47f5-8561-f65b3367ed10"
+        "id": "84e65a11",
+        "outputId": "51c8412e-61f9-4353-f343-6cdd57ade2c8"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Horas transcurridas: 10\n",
-            "Concentracion final: 11.477777773064126\n"
-          ]
-        }
-      ],
       "source": [
         "concentracion = 58.3\n",
         "factor_decaimiento = 0.85\n",
@@ -485,13 +434,23 @@
         "\n",
         "print(\"Horas transcurridas:\", horas_transcurridas)\n",
         "print(\"Concentracion final:\", concentracion)"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Horas transcurridas: 10\n",
+            "Concentracion final: 11.477777773064126\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "b4c0e8d8",
       "metadata": {
-        "id": "b4c0e8d8"
+        "id": "9c28ec05"
       },
       "source": [
         "## Ejercicio 9 — Registros de varias estaciones\n",
@@ -501,32 +460,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "46ccc68b",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.674455Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.674273Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.680822Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.679654Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "46ccc68b",
-        "outputId": "43c96cb2-3023-4636-8a05-73bbaba385ae"
+        "id": "d76edc8c",
+        "outputId": "2479a9c8-0154-43d9-c8d6-e1bc463bce70"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "EST-01 - Norte - lat: 6.28 lon: -75.57 - promedio: 12.1 - categoria: Moderada - humedad: no disponible\n",
-            "EST-02 - Centro - lat: 6.24 lon: -75.58 - promedio: 45.4 - categoria: Dañina para grupos sensibles - humedad: no disponible\n",
-            "EST-03 - Sur - lat: 6.19 lon: -75.59 - promedio: 10.333333333333334 - categoria: Buena - humedad: 68.0\n"
-          ]
-        }
-      ],
       "source": [
         "registros_estaciones = [\n",
         "    {\"codigo\": \"EST-01\", \"sector\": \"Norte\",  \"coordenadas\": (6.28, -75.57), \"lecturas\": [8.4, 12.7, 15.2]},\n",
@@ -558,13 +498,24 @@
         "          \"- promedio:\", promedio_estacion,\n",
         "          \"- categoria:\", categoria_estacion,\n",
         "          \"- humedad:\", humedad_estacion)"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "EST-01 - Norte - lat: 6.28 lon: -75.57 - promedio: 12.1 - categoria: Moderada - humedad: no disponible\n",
+            "EST-02 - Centro - lat: 6.24 lon: -75.58 - promedio: 45.4 - categoria: Dañina para grupos sensibles - humedad: no disponible\n",
+            "EST-03 - Sur - lat: 6.19 lon: -75.59 - promedio: 10.333333333333334 - categoria: Buena - humedad: 68.0\n"
+          ]
+        }
       ]
     },
     {
       "cell_type": "markdown",
-      "id": "f918ab90",
       "metadata": {
-        "id": "f918ab90"
+        "id": "d196d2b8"
       },
       "source": [
         "## Celda de verificación"
@@ -572,30 +523,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
-      "id": "846dc9f8",
       "metadata": {
-        "execution": {
-          "iopub.execute_input": "2026-09-16T02:39:11.682527Z",
-          "iopub.status.busy": "2026-09-16T02:39:11.682366Z",
-          "iopub.status.idle": "2026-09-16T02:39:11.687892Z",
-          "shell.execute_reply": "2026-09-16T02:39:11.686651Z"
-        },
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "846dc9f8",
-        "outputId": "1ca124a0-8139-4c41-c1ce-4feb96d59fdf"
+        "id": "7d32de40",
+        "outputId": "4c53427f-666a-4c8c-c6e9-9cefb2302142"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Verificación completada sin errores.\n"
-          ]
-        }
-      ],
       "source": [
         "# Celda de verificación — ejecútela al final, después de todo lo demás\n",
         "assert type(codigo_estacion) == str, \"codigo_estacion debería ser str\"\n",
@@ -608,22 +542,17 @@
         "assert abs(promedio_pm25 - 22.55) < 0.01, \"revise el promedio del Ejercicio 6\"\n",
         "assert maximo_pm25 == 58.3 and minimo_pm25 == 7.5, \"revise los extremos\"\n",
         "print(\"Verificación completada sin errores.\")"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Verificación completada sin errores.\n"
+          ]
+        }
       ]
     }
-  ],
-  "metadata": {
-    "language_info": {
-      "name": "python"
-    },
-    "colab": {
-      "provenance": [],
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    }
-  },
-  "nbformat": 4,
-  "nbformat_minor": 5
+  ]
 }
